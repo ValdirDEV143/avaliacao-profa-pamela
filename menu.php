@@ -40,6 +40,12 @@ if (is_numeric($primeiro_valor) && is_numeric($segundo_valor)){
     $divisao_numeros = $primeiro_valor / $segundo_valor;
     echo "<br>";
     echo "Divisão: " . $divisao_numeros;
+    echo "<h3>Resultados:</h3>";
+    echo "Soma: $soma (Tipo: " . gettype($soma) . ")<br>";
+    echo "Subtração: $subtracao (Tipo: " . gettype($subtracao) . ")<br>";
+    echo "Multiplicação: $multiplicacao (Tipo: " . gettype($multiplicacao) . ")<br>";
+    echo "Divisão: $divisao (Tipo: " . gettype($divisao) . ")<br>";
+    echo "<br>";
 }
 
 else{
