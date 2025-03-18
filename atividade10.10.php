@@ -9,44 +9,44 @@ Aqui está a implementação de uma classe `Calculadora` com o método `dividir(
 #### 1. **index.php** (Código Principal)
 
 ```php
-<?php
+<!-- <?php
 
 // Definição da classe Calculadora
-class Calculadora {
+// class Calculadora {
 
-    // Método para dividir dois números
-    public function dividir($a, $b) {
-        // Verifica se o divisor é 0
-        if ($b == 0) {
-            // Lança uma exceção se o divisor for zero
-            throw new DivisionByZeroException("Erro: Não é possível dividir por zero.");
-        }
+//     // Método para dividir dois números
+//     public function dividir($a, $b) {
+//         // Verifica se o divisor é 0
+//         if ($b == 0) {
+//             // Lança uma exceção se o divisor for zero
+//             throw new DivisionByZeroException("Erro: Não é possível dividir por zero.");
+//         }
 
-        // Retorna o resultado da divisão
-        return $a / $b;
-    }
-}
+//         // Retorna o resultado da divisão
+//         return $a / $b;
+//     }
+// }
 
-// Bloco principal para executar a divisão e tratar exceções
-try {
-    // Instanciando a classe Calculadora
-    $calculadora = new Calculadora();
+// // Bloco principal para executar a divisão e tratar exceções
+// try {
+//     // Instanciando a classe Calculadora
+//     $calculadora = new Calculadora();
 
-    // Tentando realizar uma divisão
-    $resultado = $calculadora->dividir(10, 0); // Aqui estamos tentando dividir por 0, então irá lançar uma exceção
+//     // Tentando realizar uma divisão
+//     $resultado = $calculadora->dividir(10, 0); // Aqui estamos tentando dividir por 0, então irá lançar uma exceção
 
-    // Exibindo o resultado da divisão
-    echo "Resultado: " . $resultado;
+//     // Exibindo o resultado da divisão
+//     echo "Resultado: " . $resultado;
 
-} catch (DivisionByZeroException $e) {
-    // Captura a exceção DivisionByZeroException e exibe a mensagem de erro
-    echo $e->getMessage(); // Mensagem personalizada de erro
-} catch (Exception $e) {
-    // Captura outras exceções gerais
-    echo "Erro inesperado: " . $e->getMessage();
-}
+// } catch (DivisionByZeroException $e) {
+//     // Captura a exceção DivisionByZeroException e exibe a mensagem de erro
+//     echo $e->getMessage(); // Mensagem personalizada de erro
+// } catch (Exception $e) {
+//     // Captura outras exceções gerais
+//     echo "Erro inesperado: " . $e->getMessage();
+// }
 
-?>
+?> -->
 ```
 
 ### Explicação:
@@ -92,3 +92,42 @@ O PHP já possui uma classe interna chamada `DivisionByZeroError` para capturar 
 ### Conclusão:
 
 Este código implementa uma maneira simples e eficaz de tratar erros de divisão por zero e exibir mensagens de erro de forma amigável ao usuário. Caso você precise personalizar mais a lógica ou adicionar outras exceções, o código pode ser facilmente expandido.
+
+
+<?php
+
+// Definindo a classe de exceção personalizada para divisão por zero
+class DivisionByZeroException extends Exception {}
+
+// Definindo a classe Calculadora
+class Calculadora {
+    // Método dividir
+    public function dividir($a, $b) {
+        if ($b == 0) {
+            // Lançando a exceção personalizada se o denominador for zero
+            throw new DivisionByZeroException("Erro: Tentativa de dividir por zero.");
+        }
+        return $a / $b;
+    }
+}
+
+// Classe principal onde o código será executado
+try {
+    // Criando uma instância da classe Calculadora
+    $calculadora = new Calculadora();
+
+    // Definindo os valores
+    $a = 10;
+    $b = 20; // Tentando dividir por zero
+
+    // Chamando o método dividir
+    $resultado = $calculadora->dividir($a, $b);
+
+    // Exibindo o resultado
+    echo "Resultado da divisão: " . $resultado;
+} catch (DivisionByZeroException $e) {
+    // Tratando a exceção e exibindo uma mensagem personalizada
+    echo $e->getMessage();  // Exibe a mensagem da exceção
+}
+
+?>

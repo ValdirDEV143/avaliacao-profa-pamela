@@ -1,4 +1,4 @@
-Aqui está o exemplo equivalente em PHP, HTML e CSS para criar uma classe `Carro` com as propriedades solicitadas e exibir as informações do carro:
+<!-- Aqui está o exemplo equivalente em PHP, HTML e CSS para criar uma classe `Carro` com as propriedades solicitadas e exibir as informações do carro:
 
 ### Estrutura de Arquivos:
 
@@ -8,32 +8,32 @@ Aqui está o exemplo equivalente em PHP, HTML e CSS para criar uma classe `Carro
 ### **index.php** (PHP e HTML):
 
 ```php
-<?php
-class Carro {
-    public $marca;
-    public $modelo;
-    public $ano_fabricacao;
+<!-- <!-- <?php -->
+// class Carro {
+//     public $marca;
+//     public $modelo;
+//     public $ano_fabricacao;
 
-    // Construtor para inicializar os valores
-    public function __construct($marca, $modelo, $ano_fabricacao) {
-        $this->marca = $marca;
-        $this->modelo = $modelo;
-        $this->ano_fabricacao = $ano_fabricacao;
-    }
+//     // Construtor para inicializar os valores
+//     public function __construct($marca, $modelo, $ano_fabricacao) {
+//         $this->marca = $marca;
+//         $this->modelo = $modelo;
+//         $this->ano_fabricacao = $ano_fabricacao;
+//     }
 
-    // Método para exibir as informações
-    public function exibir_informacoes() {
-        echo "<p><strong>Marca:</strong> " . $this->marca . "</p>";
-        echo "<p><strong>Modelo:</strong> " . $this->modelo . "</p>";
-        echo "<p><strong>Ano de Fabricação:</strong> " . $this->ano_fabricacao . "</p>";
-    }
-}
+//     // Método para exibir as informações
+//     public function exibir_informacoes() {
+//         echo "<p><strong>Marca:</strong> " . $this->marca . "</p>";
+//         echo "<p><strong>Modelo:</strong> " . $this->modelo . "</p>";
+//         echo "<p><strong>Ano de Fabricação:</strong> " . $this->ano_fabricacao . "</p>";
+//     }
+// }
 
-// Criando um objeto da classe Carro
-$meu_carro = new Carro('Toyota', 'Corolla', 2022);
-?>
+// // Criando um objeto da classe Carro
+// $meu_carro = new Carro('Toyota', 'Corolla', 2022);
+// ?> -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,7 @@ $meu_carro = new Carro('Toyota', 'Corolla', 2022);
         ?>
     </div>
 </body>
-</html>
+</html> -->
 ```
 
 ### **style.css** (CSS para estilo):
@@ -121,4 +121,9 @@ Modelo: Corolla
 Ano de Fabricação: 2022
 ```
 
-Essa estrutura pode ser facilmente personalizada para adicionar mais funcionalidades ou estilos, caso seja necessário. Se tiver mais alguma dúvida ou precisar de ajustes, é só falar!
+Essa estrutura pode ser facilmente personalizada para adicionar mais funcionalidades ou estilos, caso seja necessário. Se tiver mais alguma dúvida ou precisar de ajustes, é só falar! -->
+
+
+
+
+
